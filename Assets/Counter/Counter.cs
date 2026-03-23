@@ -10,9 +10,19 @@ public class Counter : MonoBehaviour
 
     private int Count = 0;
 
+    public GameObject sphere;
+    private GameObject s => sphere;
+
     private void Start()
     {
         Count = 0;
+    }
+
+    private void Update()
+    {
+       if (Count >= 10)
+        {
+        }
     }
 
     private void OnTriggerEnter(Collider other)
