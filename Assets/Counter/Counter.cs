@@ -10,18 +10,26 @@ public class Counter : MonoBehaviour
 
     private int Count = 0;
 
-    public GameObject sphere;
-    private GameObject s => sphere;
+    public float force = 5f;
 
-    private void Start()
+    public List<GameObject> spheres = new List<GameObject>();
+
+    private Rigidbody rb;
+
+    public void Start()
     {
         Count = 0;
     }
 
-    private void Update()
+    public void Update()
     {
        if (Count >= 10)
         {
+            foreach (GameObject sphere in spheres)
+            {
+                Rigidbody rb = sphere.GetComponent<Rigidbody>();
+                rb.AddForce(Vector3.up * force);
+            }
         }
     }
 
