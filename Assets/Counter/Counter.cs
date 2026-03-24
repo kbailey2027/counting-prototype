@@ -38,4 +38,10 @@ public class Counter : MonoBehaviour
         Count += 1;
         CounterText.text = "Count : " + Count;
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Count -= 1;
+        CounterText.text = "Count : " + Count;
+    }
 }

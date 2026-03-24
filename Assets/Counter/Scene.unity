@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CounterText: {fileID: 598753586}
-  force: 5
+  force: 100
   spheres:
   - {fileID: 549909511}
   - {fileID: 1331913071}
